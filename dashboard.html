@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard with Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Login Form -->
+ <div class="login-container" id="loginForm">
+  <h2>Login</h2>
+  <div id="login-message" class="message"></div>
+  <input type="text" id="username" placeholder="Username" required />
+  <input type="password" id="password" placeholder="Password" required />
+  <button onclick="login()">Login</button>
+</div>
+
+  <!-- Dashboard -->
+  <div class="dashboard" id="dashboard" style="display: none;">
+    <div class="sidebar">
+            <!-- Tombol hamburger di sebelah kanan sidebar -->
+            <div class="hamburger" onclick="toggleSidebar()">
+                &#9776;
+            </div>
+    
+            <!-- Bagian Profil -->
+            <div class="profile">
+                <img src="imgs/profile.jpg" alt="Profile" class="profile-img">
+                <p class="profile-name">UNIVERSITAS PAMULANG</p>
+            </div>
+
+      <ul>
+        <p></p>Welcome, Irna Liana Hulu<br>Administrator</p>
+        <li><a href="#dashboard" onclick="showContent('dashboard')">Dashboard</a></li>
+        
+        <!-- Menu Karyawan dengan Sub-menu -->
+        <li class="menu-item">
+          <a href="#karyawan" onclick="toggleSubMenu('karyawanSubMenu')">MENU KARYAWAN</a>
+          <ul class="submenu" id="karyawanSubMenu">
+            <li><a href="#karyawan" onclick="showContent('karyawan')">Karyawan</a></li>
+            <li><a href="#jabatan" onclick="showContent('jabatan')">Jabatan</a></li>
+            <li><a href="#divisi" onclick="showContent('divisi')">Divisi</a></li>
+          </ul>
+        </li>
+
+        <!-- Menu Karyawan dengan Sub-menu -->
+        <li class="menu-item">
+          <a href="#absensi" onclick="toggleSubMenu('absensiSubMenu')">MENU ABSENSI</a>
+          <ul class="submenu" id="absensiSubMenu">
+            <li><a href="#absensi" onclick="showContent('absensi')">Absensi</a></li>
+            <li><a href="#izin" onclick="showContent('jabatan')">Izin</a></li>
+            <li><a href="#lembur" onclick="showContent('lembur')">Lembur</a></li>
+          </ul>
+        </li>
+
+        <!-- Menu Karyawan dengan Sub-menu -->
+        <li class="menu-item">
+          <a href="#penggajian" onclick="toggleSubMenu('penggajianSubMenu')">MENU PENGGAJIAN</a>
+          <ul class="submenu" id="penggajianSubMenu">
+            <li><a href="#slipgaji" onclick="showContent('slipGaji')">Slip Gaji</a></li>
+            <li><a href="#cetakslipgaji" onclick="showContent('cetakSlipGaji')">Cetak Slip Gaji</a></li>
+          </ul>
+        </li>
+
+        <!-- Menu Karyawan dengan Sub-menu -->
+        <li class="menu-item">
+          <a href="#laporan" onclick="toggleSubMenu('laporanSubMenu')">MENU LAPORAN</a>
+          <ul class="submenu" id="laporanSubMenu">
+            <li><a href="#cetakLaporan" onclick="showContent('cetakLaporan')">Cetak Laporan</a></li>
+          </ul>
+        </li>
+
+        <!-- Menu Karyawan dengan Sub-menu -->
+        <li class="menu-item">
+          <a href="#admin" onclick="toggleSubMenu('adminSubMenu')">MENU ADMIN</a>
+          <ul class="submenu" id="adminSubMenu">
+            <li><a href="#pengguna" onclick="showContent('pengguna')">Pengguna</a></li>
+          </ul>
+        </li>
+
+        <li><a href="#settings" onclick="showContent('settings')">Settings</a></li>
+        <li><a href="#logout" onclick="logout()">Logout</a></li>
+      </ul>
+    </div>
+
+     <!-- Dashboard Content -->
+     <main class="dashboard">
+      <!-- Title Section (stacked above cards) -->
+      <div class="title-section">
+          <h1>Sistem Informasi Manajemen Karyawan</h1>
+          <h2>Admin Dashboard</h2>
+      </div>
+
+      <!-- Cards Section -->
+      <div class="cards">
+          <div class="card">
+              <h3>Data Pegawai</h3>
+              <p>13</p>
+          </div>
+          <div class="card">
+              <h3>Absensi Hari Ini</h3>
+              <p>0</p>
+          </div>
+          <div class="card">
+              <h3>Izin Menunggu Konfirmasi</h3>
+              <p>2</p>
+          </div>
+          <div class="card">
+              <h3>Lembur Menunggu Konfirmasi</h3>
+              <p>1</p>
+          </div>
+      </div>
+  </main>
+</div>
+
+<!-- Karyawan Content -->
+<div class="content" id="karyawanContent" style="display: none;">
+  <h2>Data Karyawan</h2>
+  <table id="employeeTable">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nama</th>
+        <th>Posisi</th>
+        <th>Departemen</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Alice</td>
+        <td>Manager</td>
+        <td>HR</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Bob</td>
+        <td>Developer</td>
+        <td>IT</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Charlie</td>
+        <td>Designer</td>
+        <td>Marketing</td>
+      </tr>
+      <!-- Tambahkan lebih banyak data karyawan sesuai kebutuhan -->
+    </tbody>
+  </table>
+</div>
+</main>
+</div>
+<script src="script.js"></script>
+
+
+ 
+</body>
+</html>

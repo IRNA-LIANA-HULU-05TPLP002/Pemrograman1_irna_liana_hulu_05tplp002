@@ -1,0 +1,374 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  background-color: #f0f2f5;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.sidebar {
+  width: 20px; /* Atur lebar sidebar */
+  position: fixed; /* Membuat sidebar tetap di tempat */
+  top: 0;
+  left: 0;
+  height: 100%; /* Mengisi tinggi viewport */
+  padding: 20px;
+  border-right: 2px solid #ccc; /* Garis pemisah antara sidebar dan konten */
+}
+
+.content {
+    margin-left: 20px; /* Memberi jarak dari sidebar untuk konten */
+    padding: 20px; /* Padding di dalam konten */
+    flex-grow: 1; /* Mengizinkan konten tumbuh untuk mengambil sisa ruang */
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #333;
+  color: white;
+  padding-top: 20px;
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  padding: 15px;
+  text-align: center;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+  background-color: #575757;
+  display: block;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.content-section {
+  display: none;
+}
+
+.content-section.active {
+  display: block;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+p {
+  margin-top: 5px;
+}
+
+/* Menu dasar dan styling halaman tetap sama seperti sebelumnya */
+.sidebar ul li {
+  padding: 15px;
+  text-align: center;
+  position: relative;
+}
+
+.sidebar ul li a {
+  color: #2d962c;
+  text-decoration: none;
+}
+
+/* Styling untuk submenu */
+.submenu {
+  display: none;
+  list-style: none;
+  padding-left: 20px;
+}
+
+.submenu li {
+  padding: 10px 0;
+  text-align: left;
+}
+
+.menu-item.active .submenu {
+  display: block;
+}
+
+.menu-item a {
+  cursor: pointer;
+}
+
+.hamburger {
+  font-size: 24px; /* Ukuran tombol hamburger */
+  background: none; /* Tanpa latar belakang */
+  border: none; /* Tanpa border */
+  cursor: pointer; /* Mengubah kursor saat hover */
+  margin: 10px; /* Spasi sekitar tombol */
+}
+
+.sidebar {
+  width: 200px; /* Lebar sidebar */
+  background-color: #f4f4f4; /* Warna latar belakang sidebar */
+  padding: 20px; /* Padding dalam sidebar */
+  height: 100vh; /* Mengatur tinggi sidebar agar memenuhi seluruh tinggi viewport */
+  position: fixed; /* Memastikan sidebar tetap di tempat saat scroll */
+  left: -220px; /* Menyembunyikan sidebar dengan menggeser keluar layar */
+  transition: left 0.3s ease; /* Animasi saat sidebar muncul */
+}
+
+/* Atur gaya untuk sidebar */
+.sidebar {
+width: 250px;               /* Lebar sidebar */
+height: 100vh;              /* Tinggi penuh dari atas ke bawah */
+background-color: #0c4c20;     /* Warna latar belakang hitam */
+color: #fff;                /* Warna teks putih */
+position: fixed;            /* Tetapkan posisi tetap di kiri */
+top: 0;
+left: 0;
+padding: 20px;
+box-sizing: border-box;
+overflow-y: auto;           /* Tambahkan scroll jika konten panjang */
+}
+
+/* Gaya untuk link atau item di sidebar */
+.sidebar a {
+color: #fff;                /* Warna teks putih */
+text-decoration: none;
+display: block;
+padding: 10px;
+border-radius: 5px;
+margin-bottom: 10px;
+transition: background-color 0.3s;
+}
+
+.sidebar a:hover {
+background-color: #333;     /* Warna saat dihover */
+}
+
+/* Tombol hamburger di dalam sidebar (sisi kanan) */
+.hamburger {
+font-size: 1.8em;
+color: #fff;
+cursor: pointer;
+position: absolute;
+top: 15px;
+right: 15px;             /* Posisi di dalam sidebar, sisi kanan */
+background-color: transparent;
+border: none;
+z-index: 1000;
+}
+
+/* Bagian Profil di Sidebar */
+.profile {
+display: flex;
+align-items: center;      /* Membuat gambar dan teks sejajar secara vertikal */
+margin-bottom: 20px;
+}
+
+/* Gambar Profil */
+.profile-img {
+width: 50px;              /* Atur ukuran gambar */
+height: 50px;
+border-radius: 50%;       /* Membuat gambar berbentuk bulat */
+margin-right: 10px;       /* Memberi jarak antara gambar dan nama */
+}
+
+
+.dashboard {
+  flex: 1;
+  padding: 20px;
+  /* Added border and shadow to separate from sidebar */
+  background-color: #ffffff;
+  border-left: 2px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.title-section {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.title-section h1 {
+  color: #2a3a80;
+  font-size: 1.8em;
+  margin-bottom: 5px;
+}
+
+.title-section h2 {
+  color: #2a3a80;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.content {
+  margin-left: 280px; /* Memberi jarak dari sidebar untuk konten */
+  padding: 50px; /* Padding di dalam konten */
+  flex-grow: 1; /* Mengizinkan konten tumbuh untuk mengambil sisa ruang */
+}
+
+.card {
+  background-color: white; /* Warna latar belakang card */
+  border: 1px solid #ccc; /* Border untuk card */
+  border-radius: 5px; /* Sudut melingkar */
+  margin: 10px; /* Spasi antar card */
+  padding: 50px; /* Padding di dalam card */
+  flex: 0 1 calc(33.333% - 20px); /* Lebar card 33% minus margin */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bayangan untuk card */
+}
+
+.card:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Efek bayangan saat hover */
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.card {
+  background-color: #137b39;
+  padding: 50px;
+  border-radius: 10px;
+  width: calc(25% - 20px); /* Each card takes 25% width */
+  height: 180px; /* Fixed height to make cards square-like */
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card h3 {
+  color: #2a3a80;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1.5em;
+  color: #555;
+}
+
+* {
+  box-sizing: border-box; /* Memastikan padding dan margin tidak merusak layout */
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Mengisi tinggi viewport */
+  margin: 0; /* Menghapus margin default */
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7; /* Warna latar belakang untuk kontras */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Memastikan kontainer menggunakan seluruh lebar */
+}
+
+/* Login Form Styling */
+.login-container {
+  width: 300px;
+  margin: 100px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+}
+
+.login-container label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-container button {
+  padding: 10px 15px;
+  width: 100%;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-container button:hover {
+  background-color: #555;
+}
+
+#error-message {
+  color: red;
+  margin-top: 10px;
+}
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .card {
+      width: calc(50% - 20px); /* Each card takes 50% width on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+      width: 100%; /* Each card takes full width on very small screens */
+  }
+}
+
+#employeeTable {
+  width: 100%;
+  border-collapse: collapse; /* Menghilangkan jarak antara border sel */
+  margin-top: 20px; /* Spasi di atas tabel */
+}
+
+#employeeTable th, #employeeTable td {
+  border: 1px solid #ccc; /* Border untuk sel */
+  padding: 10px; /* Padding di dalam sel */
+  text-align: left; /* Menyusun teks ke kiri */
+}
+
+#employeeTable th {
+  background-color: #f4f4f4; /* Warna latar belakang untuk header tabel */
+}
